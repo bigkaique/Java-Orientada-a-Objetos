@@ -1,0 +1,33 @@
+public class Carro {
+    // atributos
+    public String chassi;
+    public String modelo;
+    public String marca;
+    private int tamanhoTanque = 50;
+    private int qntCombustivel;
+// metodos
+    public void buzinar(){
+        System.out.println("bi bi bi");
+    }
+    public void acelerar(){
+        System.out.println( "o carro" +this.marca +"-" +this.modelo +"está");
+        if(this.qntCombustivel >0){
+            System.out.println("acelerando");
+            qntCombustivel --;
+        } else{
+            System.out.println("tanque vazio");
+        }
+        
+    }
+
+     public void frear(){
+        System.out.println("Freando");
+    }
+    public void abastecer (int litros){
+       if( qntCombustivel + litros >tamanhoTanque){
+        System.out.println("não cabe no tamque");
+       } else{
+        qntCombustivel+=litros;
+       }
+    }
+}
